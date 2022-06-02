@@ -34,5 +34,9 @@ CREATE TABLE clients (
 );
 
 
+-- Voir descreption  de la table
+-- DESC <nom_table> ou DESCRIBE <nom_table>
+DESC TABLE;
+
 
 
