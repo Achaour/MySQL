@@ -31,3 +31,29 @@ values("N1280","Nokia",199,1925),
 ("Droid","Motorola",150,8395),
 ("Iphone 13 ProMax","Apple",1300,12849),
 ("Galaxy Note 20","Samsung",1100,10353);
+
+-- # LMD 2 : Selection(projection)
+
+-- une requête pour liste tous les modèlesde téléphones
+SELECT * FROM telephones
+
+--1. une requête pour lister tous les telephone(name, manufacturer) 
+-- de tous lestéléphone dont le prix est supérieur à 200€
+
+SELECT name, manufacturer from telephones where price>200;
+
+--2. une requête pour lister tous les telephone (name,manufacturer)
+-- de tous les téléphone dont le prix est varie entre 150 et 200€.
+
+SELECT name, manufacturer from telephones where price<200 and price > 150;
+
+--3. Lister tous les téléphones de marque samsung et Apple
+SELECT name from telephones where manufacturer="samsung"  or  manufacturer="Apple";
+
+
+
+
+
+
+
+
