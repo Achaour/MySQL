@@ -10,5 +10,8 @@ SHOW DATABASES;
 
 CREATE DATABASE Ventes;
 
+-- 3. Utiliser/Selctionner une base de données.
 
--- 3. Creation de la table de données 
+USE ventes;
+
+-- 4. Creation de la table de données 
