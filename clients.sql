@@ -61,3 +61,13 @@ ALTER TABLE clients ADD COLUMN age INTEGER(2);
 UPDATE clients SET telephone ="0673460986" WHERE Id=2;
 
 UPDATE clients SET postnom="Tarzan", age=17 WHERE Id=1
+
+-- Supprime en enregistrement 
+
+DELETE FROM clients WHERE Id=7
+
+-- Configurer MYSQL en mode strcit
+-- Valeur pour le mode strict : Strict_Transaction 
+
+
+SHOW VARIABLES LIKE 'sql_mode'
