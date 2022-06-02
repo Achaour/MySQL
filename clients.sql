@@ -38,5 +38,9 @@ CREATE TABLE clients (
 -- DESC <nom_table> ou DESCRIBE <nom_table>
 DESC TABLE;
 
+-- Modifier une table en ajoutant une nouvelle colonne 
+ALTER TABLE clients ADD postnom VARCHAR(50) 
 
+-- Modifier une table en ajoutant une nouvelle colonne apres une autre
+ALTER TABLE clients ADD postnom VARCHAR(50) AFTER prenom;
 
