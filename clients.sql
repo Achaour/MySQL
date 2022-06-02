@@ -48,7 +48,16 @@ ALTER TABLE clients ADD postnom VARCHAR(50) AFTER prenom;
 
 
 SELECT * FROM TABLE
-
+-- 7. inserer 
 
 INSERT INTO clients (nom, prenom, postnom, email, telephone)
 values("Achaour","Mansour","achaourmansour@gmail.com","0699763062")
+("Andam","Hamza","andamhamza@gmail.com","0699763088"),("Boujerfaoui","Yassine","BoujerfaouiYassine@gmail.com","0699764088")
+
+-- Rajout d'une colonne age (2 chiffres maximum)
+ALTER TABLE clients ADD COLUMN age INTEGER(2);
+
+-- Mise à jour des données 
+UPDATE clients SET telephone ="0673460986" WHERE Id=2;
+
+UPDATE clients SET postnom="Tarzan", age=17 WHERE Id=1
