@@ -71,3 +71,39 @@ DELETE FROM clients WHERE Id=7
 
 
 SHOW VARIABLES LIKE 'sql_mode'
+--------------------------------------------------------------------------
+
+CREATE TABLE telephones (
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY?
+    numero VARCHAR(20) NOT NULL,
+    id_client INTEGER,
+    --FOREIGN KEY(id_client) REFERENCES clients(id) ON DELETE SET NULL
+    --FOREIGN KEY(id_client) REFERENCES clients(id) ON DELETE CASCADE
+      FOREIGN KEY(id_client) REFERENCES clients(id) ON DELETE RESTRICT
+
+);
+
+ALTER TABLE clients DROP COLUMN telephones;
+--  supprimer une table
+-- Ex:DROP TABLE clients;
+
+-- supprimer une base de données
+-- Ex: DROP DATABASE ;
+
+-- Join query
+-- afficher tous les numeros de telephones de tous les clients
+-- Tables sollicités: clients telephones 
+
+SELECT client.prenom, client.nom, telephones.numero FROM 
+client Join telephone ON client.id=telephones.id_client;
+
+-- Jointure et concatenation 
+
+SELECT concat(clients.prenom," ",clients.nom) as nom,
+clients.email, telephones.numero FROM clients Join telephones 
+ON clients.id=telephones.id_client;
+
+-- Jointure et condition 
+SELECT concat(clients.prenom," ",clients.nom) as nom,
+clients.email, telephones.numero FROM clients Join telephones 
+ON clients.id=telephones.id_client where clients.id=1;

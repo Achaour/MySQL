@@ -34,7 +34,7 @@ SELECT * FROM v_revenu_total;
 SELECT DISTINCT(manufacturer) from telephones;
 SELECT count(*) from telephones;
 
--- Afficher le nombre d'appzaeils apple:  
+-- Afficher le nombre d'appareils apple:  
 SELECT count (*) from telephones where manufacturer="apple";
 
 -- la moyenne de ventes 
