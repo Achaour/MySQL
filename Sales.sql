@@ -34,7 +34,7 @@ values("N1280","Nokia",199,1925),
 
 -- # LMD 2 : Selection(projection)
 
--- une requête pour liste tous les modèlesde téléphones
+-- une requête pour liste tous les modèles de téléphones
 SELECT * FROM telephones
 
 --1. une requête pour lister tous les telephone(name, manufacturer) 

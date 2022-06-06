@@ -72,5 +72,19 @@ values("Formation","Angular",2,3,1200,0),
 ("Coaching","React techlead",3,150,7553,1)
 ("Coaching","Jakarta EE",4,150,7563,2);
 
--- modifier le float 
+-- Afficher toutes les formations sollicités par le client M2i formation
+-- tentative SELECT firstName, lastName, email, phone,adresse, zipCode, city, country from client where companyName="M2I Formation";
 
+SELECT concat(orders.typePresta," ",orders.designation) as Formations 
+FROM orders Join clients ON clients.id=orders.clientId WHERE clientId=2;;
+
+-- Afficher les noms et contacts de tous les contacts des clients qui ont sollicité un coaching
+
+SELECT concat(clients.firstName," ",clients.lastName) as NOM, clients.email, clients.phone 
+FROM orders Join clients ON clients.id=orders.clientId where typePresta="coaching";
+
+-- Afficher les noms et contacts de tous les contacts des clients qui ont sollicité un coaching pour les accompagnements React.js
+SELECT concat(clients.firstName," ",clients.lastName) as NOM, clients.email, clients.phone 
+FROM orders Join clients ON clients.id=orders.clientId where typePresta="coaching" and ;
+
+-- 
