@@ -87,4 +87,11 @@ FROM orders Join clients ON clients.id=orders.clientId where typePresta="coachin
 SELECT concat(clients.firstName," ",clients.lastName) as NOM, clients.email, clients.phone 
 FROM orders Join clients ON clients.id=orders.clientId where typePresta="coaching" and ;
 
--- 
+-- afficher le prix UHT et prix TTC en se basant sur le unité Price(TJM) 
+-- et le nombre de jours de prestation tout en sachant que la TVA est de 20%.
+
+
+CREATE VIEW total_Exclude_Taxe AS SELECT typePresta as modele, designation as Formation , 
+nbDays as Days,unitPrice as prix, (nbDays*unitPrice) as totalExcludeTaxe,
+(nbDays*unitPrice) + (nbDays*unitPrice)*0.2 astotalWithTaxe ,state as etat FROM orders;
+SELECT * FROM total_exclude_taxe;
