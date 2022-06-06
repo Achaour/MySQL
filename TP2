@@ -45,4 +45,32 @@ CREATE TABLE clients (
 
 );
 
+ALTER TABLE orders CHANGE companyName typePresta VARCHAR(50);
+
+
+
+
+-- # LMD 1 : Insertions
+-- *=>Insérer les données suivantes :
+
+INSERT INTO clients (companyName,firstName,lastName,email,phone,adresse,zipCode,city,country,state)
+values ("Capgemini","Fabrice","Martin","martin@mail.com","06 56 85 84 33", "abc", "xyz","Nantes","France",0),
+("M2I Formation", "Julien", "Lamard", "lamard@mail.com", "06 11 22 33 44", "abc", "xyz", "Paris", "France",1),
+("ATOS", "Jean", "Zozor", "jzozor@mail.com", "06 09 08 07 06", "quelque part", "tre", "Bastia", "France", 1),
+("SOPRA STRERIA", "Morgane", "Goulard", "morgane@mail.com", "06 02 03 04 05", "chez moi", "sfu", "Rennes", "France", 0);
+
+INSERT INTO orders (typePresta,designation,clientId,nbDays,
+unitPrice,state)
+values("Formation","Angular",2,3,1200,0),
+("Formation","React avancé",2,3,1000,2),
+("Coaching","React techlead",1,20,900,2),
+("Coaching","Nest.js techlead",1,50,800,1),
+("Coaching","React techlead",3,150,7543,2),
+("Coaching","Jakarta EE",3,160,7500,0),
+("Coaching","Angular Techlead",3,160,7600,1),
+("Coaching","React techlead",2,140,7540,0)
+("Coaching","React techlead",3,150,7553,1)
+("Coaching","Jakarta EE",4,150,7563,2);
+
+-- modifier le float 
 
