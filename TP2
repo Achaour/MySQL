@@ -95,3 +95,6 @@ CREATE VIEW total_Exclude_Taxe AS SELECT typePresta as modele, designation as Fo
 nbDays as Days,unitPrice as prix, (nbDays*unitPrice) as totalExcludeTaxe,
 (nbDays*unitPrice) + (nbDays*unitPrice)*0.2 astotalWithTaxe ,state as etat FROM orders;
 SELECT * FROM total_exclude_taxe;
+-- Lister toutes les prestations qui sont confirmés et qui vont rapporter plus 30.000€
+
+SELECT typePresta from clients where totalExcludeTaxe > =30000 and state= 2;

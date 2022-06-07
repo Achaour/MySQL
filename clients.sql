@@ -107,3 +107,27 @@ ON clients.id=telephones.id_client;
 SELECT concat(clients.prenom," ",clients.nom) as nom,
 clients.email, telephones.numero FROM clients Join telephones 
 ON clients.id=telephones.id_client where clients.id=1;
+
+
+-- ***************** Group by
+
+-- Nombre de ventes pour tous les fabricants
+
+SELECT manufacturer, SUM(units_sold) FROM telephones GROUP by manufacturer;
+
+
+
+-- CA par fabricant dans l'ordre decroissant des CA
+
+SELECT manufacturer, SUM(price*units_sold) as chiffre_affaire 
+FROM telephones GROUP BY manfacturer ORDER by chiffre_affaire DESC;
+
+-- Toutes les ventes des marques qui ont realisé un CA de plus de 20000
+
+SELECT manufacturer, SUM (price*units_sold) as chiffre_affaire 
+FROM telephones GROUP by manufacturer HAVING chiffre_affaire > 200000;
+
+-- Mauvaise approche
+-- SELECT manufacturer,SUM(price*units_sold) as chiffre_affaire 
+-- FROM telephones  WHERE chiffre_affaire>20000000 GROUP BY manufacturer;
+

@@ -1,0 +1,46 @@
+-- 2. Creation de la base de données.
+
+CREATE DATABASE TP2;
+
+-- 3. Utiliser/sélectionner une base de données.
+USE TP2;
+
+CREATE TABLE orders (
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    companyName VARCHAR(50) NOT NULL,
+    designation VARCHAR (50) NOT NULL,
+    clientId INTEGER ,
+    nbDays INTEGER  NOT NULL, 
+    unitPrice FLOAT (20) NOT NULL,
+   -- totalExcludeTaxe FLOAT (20) NOT NULL,
+   -- totalWithTaxe FLOAT (20) NOT NULL,
+    state VARCHAR (20) NOT NULL,
+    FOREIGN KEY(clientId) REFERENCES clients(id) ON DELETE RESTRICT
+);
+
+CREATE TABLE clients (
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    companyName VARCHAR(50) NOT NULL,
+    firstName VARCHAR (50) NOT NULL,
+    lastName VARCHAR (50) NOT NULL,
+    email VARCHAR (50) NOT NULL,
+    phone INTEGER ,
+    adresse VARCHAR (50) NOT NULL,
+    zipcode VARCHAR (50) NOT NULL,
+
+    city VARCHAR (50) NOT NULL,
+    country VARCHAR (50) NOT NULL,
+    state INTEGER (20) NOT NULL
+    
+
+);
+
+
+INSERT INTO client ( companyName, firstName, lastName, email, phone, zipCode, city, country, state )
+values ("Capgemini","Fabrice","martin,martin@mail.com","0656858433","abc","xyz","Nantes","France",0),
+("m2i Formation","Julien","lamard", "lamard@mail.com","0611223344","abc","xyz","paris","France",1),
+("ATOS", "Jean", "Zozor", "jzozor@mail.com", "06 09 08 07 06", "quelque part", "tre", "Bastia", "France", 1),
+("SOPRA STRERIA", "Morgane", "Goulard", "morgane@mail.com", "06 02 03 04 05", "chez moi", "sfu", "Rennes", "France", 0);
+
+
+
