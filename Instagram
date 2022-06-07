@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Utilisateur  (
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     username VARCHAR(50) NOT NULL,
-    adresse_email VARCHAR(50) NOT NULL UNIQUE,
+    adresse_email VARCHAR(1000) NOT NULL UNIQUE,
     avatar VARCHAR(100) NOT NULL 
 );
 
@@ -42,3 +42,234 @@ CREATE TABLE IF NOT EXISTS Commentaire (
     FOREIGN KEY (id_user) REFERENCES utilisateur(id) ON UPDATE CASCADE ON DELETE CASCADE, 
     contenu VARCHAR (100)
 );
+
+
+
+-- *** Insertions Utilisateur ***:
+
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (1, 'Aubrie', 'Kearford', 'Mallissa', 'mkearford0@youtube.com', 'http://dummyimage.com/118x100.png/5fa2dd/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (2, 'Mort', 'Vassel', 'Oralie', 'ovassel1@comcast.net', 'http://dummyimage.com/149x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (3, 'Fae', 'Baglin', 'Margarita', 'mbaglin2@dagondesign.com', 'http://dummyimage.com/104x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (4, 'Delainey', 'Burfield', 'Irwinn', 'iburfield3@xrea.com', 'http://dummyimage.com/179x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (5, 'Jimmie', 'Titford', 'Annabal', 'atitford4@youtu.be', 'http://dummyimage.com/139x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (6, 'Burk', 'McCraine', 'Obadiah', 'omccraine5@vk.com', 'http://dummyimage.com/150x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (7, 'Gaylord', 'Stading', 'Thaddus', 'tstading6@slate.com', 'http://dummyimage.com/228x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (8, 'Cordelie', 'Slavin', 'Herman', 'hslavin7@intel.com', 'http://dummyimage.com/222x100.png/ff4444/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (9, 'Beale', 'Elia', 'Adler', 'aelia8@godaddy.com', 'http://dummyimage.com/118x100.png/5fa2dd/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (10, 'Deb', 'Allot', 'Bobinette', 'ballot9@sciencedirect.com', 'http://dummyimage.com/144x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (11, 'Putnam', 'Fryers', 'Giacopo', 'gfryersa@friendfeed.com', 'http://dummyimage.com/137x100.png/ff4444/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (12, 'Marie-jeanne', 'Makey', 'Milka', 'mmakeyb@intel.com', 'http://dummyimage.com/202x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (13, 'Pru', 'Lutman', 'Gisele', 'glutmanc@biblegateway.com', 'http://dummyimage.com/237x100.png/5fa2dd/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (14, 'Yanaton', 'Brice', 'Pollyanna', 'pbriced@de.vu', 'http://dummyimage.com/179x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (15, 'Ichabod', 'Merdew', 'Solly', 'smerdewe@theglobeandmail.com', 'http://dummyimage.com/122x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (16, 'Hermy', 'Pancoast', 'Garwin', 'gpancoastf@rakuten.co.jp', 'http://dummyimage.com/168x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (17, 'Nathanil', 'Poon', 'Carlyle', 'cpoong@omniture.com', 'http://dummyimage.com/229x100.png/5fa2dd/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (18, 'Kelcie', 'Eam', 'Ivor', 'ieamh@google.fr', 'http://dummyimage.com/117x100.png/cc0000/ffffff');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (19, 'Alberta', 'Comino', 'Dane', 'dcominoi@jiathis.com', 'http://dummyimage.com/170x100.png/dddddd/000000');
+insert into Utilisateur (id, nom, prenom, username, adresse_email, avatar) values (20, 'Austin', 'Tunnicliff', 'Stuart', 'stunnicliffj@upenn.edu', 'http://dummyimage.com/103x100.png/5fa2dd/ffffff');
+
+
+-- *** Insertions 60 Photos ***:
+
+
+insert into Photos (id, url_image, id_user) values (1, 'http://dummyimage.com/189x100.png/dddddd/000000', 17);
+insert into Photos (id, url_image, id_user) values (2, 'http://dummyimage.com/229x100.png/5fa2dd/ffffff', 11);
+insert into Photos (id, url_image, id_user) values (3, 'http://dummyimage.com/204x100.png/cc0000/ffffff', 17);
+insert into Photos (id, url_image, id_user) values (4, 'http://dummyimage.com/230x100.png/dddddd/000000', 18);
+insert into Photos (id, url_image, id_user) values (5, 'http://dummyimage.com/216x100.png/ff4444/ffffff', 5);
+insert into Photos (id, url_image, id_user) values (6, 'http://dummyimage.com/104x100.png/ff4444/ffffff', 17);
+insert into Photos (id, url_image, id_user) values (7, 'http://dummyimage.com/159x100.png/ff4444/ffffff', 5);
+insert into Photos (id, url_image, id_user) values (8, 'http://dummyimage.com/125x100.png/cc0000/ffffff', 19);
+insert into Photos (id, url_image, id_user) values (9, 'http://dummyimage.com/227x100.png/dddddd/000000', 19);
+insert into Photos (id, url_image, id_user) values (10, 'http://dummyimage.com/134x100.png/ff4444/ffffff', 18);
+insert into Photos (id, url_image, id_user) values (11, 'http://dummyimage.com/192x100.png/ff4444/ffffff', 17);
+insert into Photos (id, url_image, id_user) values (12, 'http://dummyimage.com/157x100.png/dddddd/000000', 16);
+insert into Photos (id, url_image, id_user) values (13, 'http://dummyimage.com/190x100.png/cc0000/ffffff', 17);
+insert into Photos (id, url_image, id_user) values (14, 'http://dummyimage.com/223x100.png/5fa2dd/ffffff', 16);
+insert into Photos (id, url_image, id_user) values (15, 'http://dummyimage.com/128x100.png/cc0000/ffffff', 6);
+insert into Photos (id, url_image, id_user) values (16, 'http://dummyimage.com/133x100.png/ff4444/ffffff', 5);
+insert into Photos (id, url_image, id_user) values (17, 'http://dummyimage.com/108x100.png/cc0000/ffffff', 5);
+insert into Photos (id, url_image, id_user) values (18, 'http://dummyimage.com/218x100.png/5fa2dd/ffffff', 8);
+insert into Photos (id, url_image, id_user) values (19, 'http://dummyimage.com/102x100.png/cc0000/ffffff', 4);
+insert into Photos (id, url_image, id_user) values (20, 'http://dummyimage.com/101x100.png/5fa2dd/ffffff', 8);
+insert into Photos (id, url_image, id_user) values (21, 'http://dummyimage.com/204x100.png/ff4444/ffffff', 9);
+insert into Photos (id, url_image, id_user) values (22, 'http://dummyimage.com/123x100.png/5fa2dd/ffffff', 11);
+insert into Photos (id, url_image, id_user) values (23, 'http://dummyimage.com/241x100.png/dddddd/000000', 6);
+insert into Photos (id, url_image, id_user) values (24, 'http://dummyimage.com/231x100.png/ff4444/ffffff', 15);
+insert into Photos (id, url_image, id_user) values (25, 'http://dummyimage.com/233x100.png/dddddd/000000', 7);
+insert into Photos (id, url_image, id_user) values (26, 'http://dummyimage.com/217x100.png/5fa2dd/ffffff', 18);
+insert into Photos (id, url_image, id_user) values (27, 'http://dummyimage.com/134x100.png/ff4444/ffffff', 3);
+insert into Photos (id, url_image, id_user) values (28, 'http://dummyimage.com/128x100.png/ff4444/ffffff', 1);
+insert into Photos (id, url_image, id_user) values (29, 'http://dummyimage.com/246x100.png/ff4444/ffffff', 15);
+insert into Photos (id, url_image, id_user) values (30, 'http://dummyimage.com/220x100.png/dddddd/000000', 5);
+insert into Photos (id, url_image, id_user) values (31, 'http://dummyimage.com/181x100.png/ff4444/ffffff', 13);
+insert into Photos (id, url_image, id_user) values (32, 'http://dummyimage.com/148x100.png/ff4444/ffffff', 4);
+insert into Photos (id, url_image, id_user) values (33, 'http://dummyimage.com/205x100.png/5fa2dd/ffffff', 2);
+insert into Photos (id, url_image, id_user) values (34, 'http://dummyimage.com/207x100.png/5fa2dd/ffffff', 13);
+insert into Photos (id, url_image, id_user) values (35, 'http://dummyimage.com/147x100.png/5fa2dd/ffffff', 15);
+insert into Photos (id, url_image, id_user) values (36, 'http://dummyimage.com/249x100.png/5fa2dd/ffffff', 10);
+insert into Photos (id, url_image, id_user) values (37, 'http://dummyimage.com/171x100.png/ff4444/ffffff', 13);
+insert into Photos (id, url_image, id_user) values (38, 'http://dummyimage.com/236x100.png/5fa2dd/ffffff', 20);
+insert into Photos (id, url_image, id_user) values (39, 'http://dummyimage.com/205x100.png/ff4444/ffffff', 18);
+insert into Photos (id, url_image, id_user) values (40, 'http://dummyimage.com/168x100.png/5fa2dd/ffffff', 8);
+insert into Photos (id, url_image, id_user) values (41, 'http://dummyimage.com/158x100.png/ff4444/ffffff', 16);
+insert into Photos (id, url_image, id_user) values (42, 'http://dummyimage.com/117x100.png/5fa2dd/ffffff', 6);
+insert into Photos (id, url_image, id_user) values (43, 'http://dummyimage.com/238x100.png/5fa2dd/ffffff', 13);
+insert into Photos (id, url_image, id_user) values (44, 'http://dummyimage.com/123x100.png/ff4444/ffffff', 20);
+insert into Photos (id, url_image, id_user) values (45, 'http://dummyimage.com/143x100.png/dddddd/000000', 1);
+insert into Photos (id, url_image, id_user) values (46, 'http://dummyimage.com/100x100.png/cc0000/ffffff', 20);
+insert into Photos (id, url_image, id_user) values (47, 'http://dummyimage.com/114x100.png/dddddd/000000', 5);
+insert into Photos (id, url_image, id_user) values (48, 'http://dummyimage.com/178x100.png/dddddd/000000', 18);
+insert into Photos (id, url_image, id_user) values (49, 'http://dummyimage.com/240x100.png/5fa2dd/ffffff', 8);
+insert into Photos (id, url_image, id_user) values (50, 'http://dummyimage.com/164x100.png/cc0000/ffffff', 8);
+insert into Photos (id, url_image, id_user) values (51, 'http://dummyimage.com/198x100.png/cc0000/ffffff', 20);
+insert into Photos (id, url_image, id_user) values (52, 'http://dummyimage.com/127x100.png/cc0000/ffffff', 14);
+insert into Photos (id, url_image, id_user) values (53, 'http://dummyimage.com/118x100.png/5fa2dd/ffffff', 10);
+insert into Photos (id, url_image, id_user) values (54, 'http://dummyimage.com/108x100.png/cc0000/ffffff', 20);
+insert into Photos (id, url_image, id_user) values (55, 'http://dummyimage.com/194x100.png/5fa2dd/ffffff', 9);
+insert into Photos (id, url_image, id_user) values (56, 'http://dummyimage.com/169x100.png/5fa2dd/ffffff', 1);
+insert into Photos (id, url_image, id_user) values (57, 'http://dummyimage.com/149x100.png/dddddd/000000', 11);
+insert into Photos (id, url_image, id_user) values (58, 'http://dummyimage.com/131x100.png/cc0000/ffffff', 1);
+insert into Photos (id, url_image, id_user) values (59, 'http://dummyimage.com/151x100.png/ff4444/ffffff', 13);
+insert into Photos (id, url_image, id_user) values (60, 'http://dummyimage.com/111x100.png/ff4444/ffffff', 20);
+
+
+
+-- *** Insertions 60 Likes ***:
+
+insert into Likes (id, id_photo, id_user ) values (1, 10, 7);
+insert into Likes (id, id_photo, id_user ) values (2, 39, 7);
+insert into Likes (id, id_photo, id_user ) values (3, 4, 1);
+insert into Likes (id, id_photo, id_user ) values (4, 39, 2);
+insert into Likes (id, id_photo, id_user ) values (5, 24, 12);
+insert into Likes (id, id_photo, id_user ) values (6, 39, 7);
+insert into Likes (id, id_photo, id_user ) values (7, 34, 1);
+insert into Likes (id, id_photo, id_user ) values (8, 46, 9);
+insert into Likes (id, id_photo, id_user ) values (9, 44, 13);
+insert into Likes (id, id_photo, id_user ) values (10, 26, 18);
+insert into Likes (id, id_photo, id_user ) values (11, 7, 5);
+insert into Likes (id, id_photo, id_user ) values (12, 37, 19);
+insert into Likes (id, id_photo, id_user ) values (13, 31, 10);
+insert into Likes (id, id_photo, id_user ) values (14, 52, 3);
+insert into Likes (id, id_photo, id_user ) values (15, 46, 10);
+insert into Likes (id, id_photo, id_user ) values (16, 48, 12);
+insert into Likes (id, id_photo, id_user ) values (17, 26, 18);
+insert into Likes (id, id_photo, id_user ) values (18, 13, 16);
+insert into Likes (id, id_photo, id_user ) values (19, 51, 6);
+insert into Likes (id, id_photo, id_user ) values (20, 43, 20);
+insert into Likes (id, id_photo, id_user ) values (21, 38, 9);
+insert into Likes (id, id_photo, id_user ) values (22, 7, 16);
+insert into Likes (id, id_photo, id_user ) values (23, 37, 2);
+insert into Likes (id, id_photo, id_user ) values (24, 21, 5);
+insert into Likes (id, id_photo, id_user ) values (25, 2, 3);
+insert into Likes (id, id_photo, id_user ) values (26, 35, 4);
+insert into Likes (id, id_photo, id_user ) values (27, 21, 18);
+insert into Likes (id, id_photo, id_user ) values (28, 51, 18);
+insert into Likes (id, id_photo, id_user ) values (29, 19, 12);
+insert into Likes (id, id_photo, id_user ) values (30, 42, 7);
+insert into Likes (id, id_photo, id_user ) values (31, 28, 16);
+insert into Likes (id, id_photo, id_user ) values (32, 34, 18);
+insert into Likes (id, id_photo, id_user ) values (33, 56, 20);
+insert into Likes (id, id_photo, id_user ) values (34, 26, 3);
+insert into Likes (id, id_photo, id_user ) values (35, 52, 13);
+insert into Likes (id, id_photo, id_user ) values (36, 39, 16);
+insert into Likes (id, id_photo, id_user ) values (37, 33, 15);
+insert into Likes (id, id_photo, id_user ) values (38, 34, 8);
+insert into Likes (id, id_photo, id_user ) values (39, 31, 6);
+insert into Likes (id, id_photo, id_user ) values (40, 56, 1);
+insert into Likes (id, id_photo, id_user ) values (41, 25, 14);
+insert into Likes (id, id_photo, id_user ) values (42, 60, 3);
+insert into Likes (id, id_photo, id_user ) values (43, 10, 17);
+insert into Likes (id, id_photo, id_user ) values (44, 34, 12);
+insert into Likes (id, id_photo, id_user ) values (45, 43, 4);
+insert into Likes (id, id_photo, id_user ) values (46, 38, 3);
+insert into Likes (id, id_photo, id_user ) values (47, 50, 15);
+insert into Likes (id, id_photo, id_user ) values (48, 42, 12);
+insert into Likes (id, id_photo, id_user ) values (49, 36, 18);
+insert into Likes (id, id_photo, id_user ) values (50, 48, 17);
+insert into Likes (id, id_photo, id_user ) values (51, 16, 18);
+insert into Likes (id, id_photo, id_user ) values (52, 56, 16);
+insert into Likes (id, id_photo, id_user ) values (53, 43, 18);
+insert into Likes (id, id_photo, id_user ) values (54, 16, 3);
+insert into Likes (id, id_photo, id_user ) values (55, 18, 7);
+insert into Likes (id, id_photo, id_user ) values (56, 58, 10);
+insert into Likes (id, id_photo, id_user ) values (57, 55, 13);
+insert into Likes (id, id_photo, id_user ) values (58, 55, 5);
+insert into Likes (id, id_photo, id_user ) values (59, 30, 1);
+insert into Likes (id, id_photo, id_user ) values (60, 42, 16);
+
+-- *** Insertions 40 commentaires *** 
+
+insert into Commentaire (id, id_photo, id_user , contenu) values (1, 47, 5, 'Carey');
+insert into Commentaire (id, id_photo, id_user , contenu) values (2, 53, 14, 'Isacco');
+insert into Commentaire (id, id_photo, id_user , contenu) values (3, 45, 18, 'Stephen');
+insert into Commentaire (id, id_photo, id_user , contenu) values (4, 1, 17, 'Hector');
+insert into Commentaire (id, id_photo, id_user , contenu) values (5, 42, 10, 'Aylmer');
+insert into Commentaire (id, id_photo, id_user , contenu) values (6, 4, 9, 'Dewie');
+insert into Commentaire (id, id_photo, id_user , contenu) values (7, 25, 8, 'Calv');
+insert into Commentaire (id, id_photo, id_user , contenu) values (8, 8, 18, 'Silvano');
+insert into Commentaire (id, id_photo, id_user , contenu) values (9, 56, 10, 'Wilek');
+insert into Commentaire (id, id_photo, id_user , contenu) values (10, 19, 17, 'Jammal');
+insert into Commentaire (id, id_photo, id_user , contenu) values (11, 43, 19, 'Holden');
+insert into Commentaire (id, id_photo, id_user , contenu) values (12, 18, 18, 'Gavan');
+insert into Commentaire (id, id_photo, id_user , contenu) values (13, 4, 14, 'Kendal');
+insert into Commentaire (id, id_photo, id_user , contenu) values (14, 22, 14, 'Darius');
+insert into Commentaire (id, id_photo, id_user , contenu) values (15, 20, 16, 'Devin');
+insert into Commentaire (id, id_photo, id_user , contenu) values (16, 13, 4, 'Gabi');
+insert into Commentaire (id, id_photo, id_user , contenu) values (17, 51, 10, 'Darby');
+insert into Commentaire (id, id_photo, id_user , contenu) values (18, 42, 6, 'Ethelred');
+insert into Commentaire (id, id_photo, id_user , contenu) values (19, 24, 12, 'Myrvyn');
+insert into Commentaire (id, id_photo, id_user , contenu) values (20, 40, 13, 'Rufus');
+insert into Commentaire (id, id_photo, id_user , contenu) values (21, 33, 8, 'Lewie');
+insert into Commentaire (id, id_photo, id_user , contenu) values (22, 3, 19, 'Krishnah');
+insert into Commentaire (id, id_photo, id_user , contenu) values (23, 4, 7, 'Sigvard');
+insert into Commentaire (id, id_photo, id_user , contenu) values (24, 54, 6, 'Freeland');
+insert into Commentaire (id, id_photo, id_user , contenu) values (25, 20, 7, 'Yale');
+insert into Commentaire (id, id_photo, id_user , contenu) values (26, 58, 19, 'Tedie');
+insert into Commentaire (id, id_photo, id_user , contenu) values (27, 39, 3, 'Fritz');
+insert into Commentaire (id, id_photo, id_user , contenu) values (28, 49, 3, 'Hadley');
+insert into Commentaire (id, id_photo, id_user , contenu) values (29, 35, 8, 'Harald');
+insert into Commentaire (id, id_photo, id_user , contenu) values (30, 56, 14, 'Korey');
+insert into Commentaire (id, id_photo, id_user , contenu) values (31, 50, 6, 'Oswald');
+insert into Commentaire (id, id_photo, id_user , contenu) values (32, 13, 5, 'Kristoffer');
+insert into Commentaire (id, id_photo, id_user , contenu) values (33, 38, 16, 'Van');
+insert into Commentaire (id, id_photo, id_user , contenu) values (34, 46, 8, 'Erasmus');
+insert into Commentaire (id, id_photo, id_user , contenu) values (35, 41, 15, 'Clair');
+insert into Commentaire (id, id_photo, id_user , contenu) values (36, 9, 18, 'Dominique');
+insert into Commentaire (id, id_photo, id_user , contenu) values (37, 46, 14, 'Luigi');
+insert into Commentaire (id, id_photo, id_user , contenu) values (38, 2, 6, 'Constantine');
+insert into Commentaire (id, id_photo, id_user , contenu) values (39, 48, 2, 'Omar');
+insert into Commentaire (id, id_photo, id_user , contenu) values (40, 8, 7, 'Gordie');
+
+
+
+-- *** 4. Pour tous les commentaires, montrer le contenu et le username de l'auteur
+
+SELECT (utilisateur.username) as  username ,commentaire.contenu as commentaire FROM commentaire 
+JOIN utilisateur ON utilisateur.id=commentaire.id_user;
+
+-- ***5. Pour chaque commentaire, afficher son contenu et l'url 
+-- de la photo à laquelle le commentaire a été ajouté.
+
+SELECT (Photos.url_image) as photo ,commentaire.contenu as commentaire FROM Photos
+JOIN commentaire ON Photos.id=commentaire.id_photo;
+
+-- *** 6. Afficher l'url de chaque photo et le nom d'utilisateur de l'auteur
+
+SELECT (Photos.url_image) as photo ,utilisateur.nom as nom FROM utilisateur
+JOIN Photos ON utilisateur.id=Photos.id_user;
+
+-- *** 7.Trouver tous les commentaires pour la photo d'id 3, avec le username de l'utilisateur qui a commenté
+
+SELECT (utilisateur.username) as  username ,commentaire.contenu as commentaire  FROM commentaire 
+JOIN utilisateur ON utilisateur.id=commentaire.id_user JOIN photos ON photos.id =commentaire.id_photo where Photos.id=3;
+
+
+--*** 8. Trouver tous les url des photos ainsi que tous les commentaire qui ont été posté par l'auteur de la photo
+SELECT (Photos.url_image) as photo ,commentaire.contenu as commentaire FROM Photos
+JOIN commentaire ON Photos.id=commentaire.id_photo;
+
+--*** 9. 
+
+--*** 10. Le nombre de likes pour la photo d’ID 4
+ SELECT COUNT(*) FROM likes WHERE id_photo=4;
