@@ -264,12 +264,23 @@ JOIN Photos ON utilisateur.id=Photos.id_user;
 SELECT (utilisateur.username) as  username ,commentaire.contenu as commentaire  FROM commentaire 
 JOIN utilisateur ON utilisateur.id=commentaire.id_user JOIN photos ON photos.id =commentaire.id_photo where Photos.id=3;
 
-
 --*** 8. Trouver tous les url des photos ainsi que tous les commentaire qui ont été posté par l'auteur de la photo
-SELECT (Photos.url_image) as photo ,commentaire.contenu as commentaire FROM Photos
-JOIN commentaire ON Photos.id=commentaire.id_photo;
 
---*** 9. 
+-- L’url des photos Les commentaires sur ces photos
+-- Or il y a une relation qui existe entre les photos et les commentaires.
+-- Après les commentaires que l’on va prendre c’est les commentaire pour lesquelles l’auteur de la photo a commenté.Si dans les commentaires
+-- on a accès à l’ID de l’utiliser et que dans les photos aussi on a l’id de l’utilisateur qui a posté, on a notre requête
+
+SELECT utilisateur.username, commentaire.contenu, photos.id, photos.url_image
+FROM commentaire
+JOIN utilisateur
+ON utilisateur.id=commentaire.id_user
+JOIN photos
+ON commentaire.id_photo=photos.id
+WHERE photos.id_user=commentaire.id_user
+;
+
+--*** 9.  
 
 --*** 10. Le nombre de likes pour la photo d’ID 4
  SELECT COUNT(*) FROM likes WHERE id_photo=4;
