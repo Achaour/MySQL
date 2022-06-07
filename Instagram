@@ -1,0 +1,6 @@
+-- 1. Creation de la base de données.
+
+CREATE DATABASE Instagram;
+
+-- 2. Utiliser/sélectionner une base de données.
+USE Instagram;

@@ -98,3 +98,30 @@ SELECT * FROM total_exclude_taxe;
 -- Lister toutes les prestations qui sont confirmés et qui vont rapporter plus 30.000€
 
 SELECT typePresta from clients where totalExcludeTaxe > =30000 and state= 2;
+
+
+CREATE TABLE "orders" (
+  "id" int(11) NOT NULL,
+  "clientId" int(11) NOT NULL,
+  "typePresta" varchar(100) NOT NULL,
+  "designation" varchar(100) NOT NULL,
+  "nbDays" int(11) NOT NULL,
+  "unitPrice" float NOT NULL,
+  "state" tinyint(1) NOT NULL,
+  "totalExcludeTaxe" float GENERATED ALWAYS AS ("nbDays" * "unitPrice") STORED,
+  "totalWithTaxe" float GENERATED ALWAYS AS ("nbDays" * "unitPrice" * 1.2) STORED ) 
+
+
+-- Chaine qui commence par M2
+  SELECT * FROM clients WHERE companyName like "M2%";
+
+  -- Chaine qui commence par formation
+SELECT * FROM clients WHERE companyName like "%formation";
+
+-- Rechercher au milieu d'une chaine
+-- chris@sopra.com => ok
+-- jean@m2i.com
+-- sarah@sopra.fr => ok
+-- luc@sopra.edu => ok
+
+SELECT * FROM clients WHERE  companyName LIKE "%sopra%";
